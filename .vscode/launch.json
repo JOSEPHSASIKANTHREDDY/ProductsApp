@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run ProductsApp-Products",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/productsapp-approuter/node_modules/@sap/html5-repo-mock/index.js",
+      "args": [
+        "--standalone",
+        "/nsProducts/index.html",
+        "--ui5",
+        "{\"version\":\".\"}"
+      ],
+      "cwd": "${workspaceFolder}/Products",
+      "env": {
+        "PORT": "6004",
+        "MOCK_LOOKUP_DIRS": "[\"webapp\"]",
+        "run.config": "{\"handlerId\":\"ui5_run_config_handler_id\",\"runnableId\":\"/home/user/projects/ProductsApp/Products\"}"
+      },
+      "envFile": "${workspaceFolder}/Products/.env1",
+      "preLaunchTask": "Build ProductsApp"
+    }
+  ]
+}
